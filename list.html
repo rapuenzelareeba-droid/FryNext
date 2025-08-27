@@ -1,0 +1,1524 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FryNest</title>
+    <link rel="shortcut icon" href="./frynest logo.png" type="image/x-icon" favicon size (32x32, 64x64, 192x192,
+        512x512)>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 600;"
+                class="navbar-brand" href="./index.html">FryNest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="./list.html">list</a></li>
+                            <li><a class="dropdown-item" href="#">order</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Delivery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+                <div class="mx-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</button>
+                </div>
+            </div>
+    </nav>
+
+
+
+    <!--Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login to FryNest</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary my-3">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sing up Modal -->
+    <div class="modal fade" id="singupModal" tabindex="-1" aria-labelledby="singupModalLabel" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Get an FryNext Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="cexampleInputPassword1">confirm Password</label>
+                        <input type="password" class="form-control" id="cexampleInputPassword1">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary my-2">Creat Account</button>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="g-6 row row-cols-xxl-6 row-cols-lg-4 row-cols-md-3 row-cols-2 my-3">
+        <div class="col">
+            <a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./double-cheeseburger.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Dairy, Bread &amp; Eggs</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./amirali-mirhashemian-jh5XyK4Rr3Y-unsplash.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Snack &amp; Munchies</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Bakery &amp; biscuit's</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div  class="card-product mb-lg-4 card">
+            <div class="text-center py-8 card-body">
+                <img  src="./bb.jpg" alt="" class="mb-3 img-fluid">
+                <div class="text-truncate">Instant Food</div>
+            </div>
+        </div>
+        </a>
+        <div class="col"><a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./top-view-chicken-with-dough-pasta-dish-dark-surface-pasta-dough-meal-dark.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Tea, Coffee &amp; Drinks</div>
+                    </div>
+                </div>
+            </a></div>
+        <div class="col">
+            <a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./aleksandra-tanasiienko-0y6eMd8vevA-unsplash.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Ata, Rice &amp; Dal</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col"><a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./bruna-branco-t8hTmte4O_g-unsplash.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Baby Care</div>
+                    </div>
+                </div>
+            </a></div>
+        <div class="col">
+            <a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./ikhsan-baihaqi-pbc2wXbQYpI-unsplash.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Chicken, Meat &amp; Fish</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col"><a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./ulvi-safari-Mb6M52y_flw-unsplash.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Cleaning Essentials</div>
+                    </div>
+                </div>
+            </a></div>
+        <div class="col"><a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./sendwich.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Pet Care</div>
+                    </div>
+                </div>
+            </a></div>
+        <div class="col">
+            <a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./monika-grabkowska-pHeX8H9WQpY-unsplash.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Fruits &amp; Vegetables</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col"><a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+                <div class="card-product mb-lg-4 card">
+                    <div class="text-center py-8 card-body">
+                        <img src="./mae-mu-IZ0LRt1khgM-unsplash.jpg" alt="" class="mb-3 img-fluid">
+                        <div class="text-truncate">Fruits &amp; Vegetables</div>
+                    </div>
+                </div>
+            </a></div>
+    </div>
+
+
+    <div class="col"><a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+            <div class="card-product mb-lg-4 card">
+                <div class="text-center py-8 card-body">
+                    <img style="width: 637;" height="40%" src="./PIZZA99.webp" alt="" width="100%" class="mb-3 img-fluid">
+                    <div class="text-truncate">Pet Care</div>
+                </div>
+            </div>
+        </a></div>
+    </div>
+
+    <div class="col"><a class="text-decoration-none text-inherit card-link" href="shop/shop-grid">
+            <div class="card-product mb-lg-4 card">
+                <div class="text-center py-8 card-body">
+                    <img style="width: 637;" height="30%" src="./sendwichbb.jpg" alt=""
+                        width="100%" class="mb-3 img-fluid">
+                    <div class="text-truncate">Fruits &amp; Vegetables</div>
+                </div>
+            </div>
+        </a></div>
+    </div>
+
+
+    <!-- sell item -->
+    <div class="g-4 row row-cols-lg-5 row-cols-md-3 row-cols-2">
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 ">
+                            <div class="d-flex gap-1 flex-column"><span
+                                    class="custom-badge  badge bg-danger">Sale</span><span
+                                    class="custom-badge  badge bg-success">10%</span></div>
+                        </div><a href="/shop/haldirams-sev-bhujia"><img src="./the-fast-food-.jpg"
+                                alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Snack &amp;
+                                Munchies</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/haldirams-sev-bhujia">hadrian's Sev Bruijn</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$21.6 </span><span
+                                class="text-decoration-line-through text-muted">$24</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "></div><a href="/shop/nutrichoice-digestive"><img
+                                src="./sestrjevitovschii-ina-7zfQ6sbWVyE-unsplash.jpg" alt="Grocery Ecommerce Template"
+                                class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Bakery
+                                &amp; Biscuits</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/nutrichoice-digestive">NltriChoice Digestive</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$24 </span><span
+                                class="text-decoration-line-through text-muted">$24</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "><span class="custom-badge  badge bg-danger">Buy 1
+                                Get $4.00 Off</span></div><a href="/shop/cadbury-5-star-chocolate"><img
+                                src="./jason-leung-AUAuEgUxg5Q-unsplash.jpg" alt="Grocery Ecommerce Template"
+                                class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Bakery
+                                &amp; Biscuits</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/cadbury-5-star-chocolate"> 5 Star Chocolate</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$35 </span><span
+                                class="text-decoration-line-through text-muted">$35</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 ">
+                            <div class="d-flex gap-1 flex-column"><span
+                                    class="custom-badge  badge bg-danger">Hot</span><span
+                                    class="custom-badge  badge bg-success">40%</span></div>
+                        </div><a href="/shop/onion-flavour-potato"><img
+                                src="./ekaterina-novitskaya-jMKxaakIKfQ-unsplash.jpg" alt="Grocery Ecommerce Template"
+                                class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Snack &amp;
+                                Munchies</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/onion-flavour-potato">Onion Flavour Potato</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$3 </span><span
+                                class="text-decoration-line-through text-muted">$5</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "><span
+                                class="custom-badge  badge bg-success">35%</span></div><a
+                            href="/shop/salted-instant-popcorn"><img src="./victoria-shes-UC0HZdUitWY-unsplash.jpg"
+                                alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Instant
+                                Food</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/salted-instant-popcorn">Salted Instant Popcorn</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$11.7 </span><span
+                                class="text-decoration-line-through text-muted">$18</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "><span class="custom-badge  badge bg-danger">Buy 1
+                                Get $4.00 Off</span></div><a href="/shop/cadbury-5-star-chocolate"><img
+                                src="./no-revisions-gA81ZTsql68-unsplash.jpg" alt="Grocery Ecommerce Template"
+                                class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Bakery
+                                &amp; Biscuits</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/cadbury-5-star-chocolate">Asbury 5 Star Chocolate</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$35 </span><span
+                                class="text-decoration-line-through text-muted">$35</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 ">
+                            <div class="d-flex gap-1 flex-column"><span
+                                    class="custom-badge  badge bg-danger">Sale</span><span
+                                    class="custom-badge  badge bg-success">10%</span></div>
+                        </div><a href="/shop/haldirams-sev-bhujia"><img src="./leo-roza-CLMpC9UhyTo-unsplash.jpg"
+                                alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Snack &amp;
+                                Munchies</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/haldirams-sev-bhujia"> Sev Bruijn</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$21.6 </span><span
+                                class="text-decoration-line-through text-muted">$24</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "><span
+                                class="custom-badge  badge bg-success">40%</span></div><a
+                            href="/shop/blueberry-greek-yogurt"><img src="./charles-chen-FF94H4xB7V4-unsplash.jpg"
+                                alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Dairy,
+                                Bread &amp; Eggs</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/blueberry-greek-yogurt">Blueberry Greek Yogurt</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$14.4 </span><span
+                                class="text-decoration-line-through text-muted">$24</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "></div><a href="/shop/britannia-cheese-slices"><img
+                                src="./farhad-ibrahimzade-Sk6my6_KTK0-unsplash.jpg" alt="Grocery Ecommerce Template"
+                                class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Dairy,
+                                Bread &amp; Eggs</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/britannia-cheese-slices">Britannia Cheese Slices</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$24 </span><span
+                                class="text-decoration-line-through text-muted">$24</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card h-20">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "><span
+                                class="custom-badge  badge bg-success">15%</span></div><a
+                            href="/shop/kelloggs-original-cereals"><img src="./scott-eckersley-R-7_ErUOLxw-unsplash.jpg"
+                                alt="Grocery Ecommerce Template" class="mb-3 img-fluid" style="height: 20%;"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Instant
+                                Food</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/kelloggs-original-cereals">Kellogg's Original Cereals</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$29.75 </span><span
+                                class="text-decoration-line-through text-muted">$35</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "></div><a href="/shop/nutrichoice-digestive"><img
+                                style="height: 20%;" src="./hamid-roshaan-uIiMSu88RZQ-unsplash.jpg"
+                                alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Bakery
+                                &amp; Biscuits</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/nutrichoice-digestive">NrtriChoice Digestive</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$24 </span><span
+                                class="text-decoration-line-through text-muted">$24</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "></div><a href="/shop/slurrp-millet-chocolate"><img
+                                style="height: 20%;" src="./monika-grabkowska-pHeX8H9WQpY-unsplash.jpg"
+                                alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Snack &amp;
+                                Munchies</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/slurrp-millet-chocolate">Slurp Millet Chocolate</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$0 </span><span
+                                class="text-decoration-line-through text-muted">$0</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "><span
+                                class="custom-badge  badge bg-success">25%</span></div><a
+                            href="/shop/amul-butter-500-g"><img style="height: 20%;"
+                                src="./farhad-ibrahimzade-Sk6my6_KTK0-unsplash.jpg" alt="Grocery Ecommerce Template"
+                                class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Dairy,
+                                Bread &amp; Eggs</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none" href="/shop/amul-butter-500-g">Auml
+                            Butter - 500 g</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$13.5 </span><span
+                                class="text-decoration-line-through text-muted">$18</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "></div><a href="/shop/nutrichoice-digestive"><img
+                                style="height: 20%;" src="./haseeb-jamil-J9lD6FS6_cs-unsplash.jpg"
+                                alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Bakery
+                                &amp; Biscuits</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/nutrichoice-digestive">NrtriChoice Digestive</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$24 </span><span
+                                class="text-decoration-line-through text-muted">$24</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-product card">
+                <div class="card-body">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 "></div><a href="/shop/slurrp-millet-chocolate">
+                            <img style="height: 20%;" src="./karlo-king-WqylFQacnqE-unsplash.jpg"
+                                alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                        <div class="card-product-action d-flex gap-1 justify-content-center"><a class="btn-action"
+                                href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14"
+                                    height="14" fill="currentColor" class="bi bi-eye">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z">
+                                    </path>
+                                    <path
+                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor" class="bi bi-heart">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15">
+                                    </path>
+                                </svg></a><a class="btn-action" href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16" width="14" height="14" fill="currentColor"
+                                    class="bi bi-arrow-left-right">
+                                    <path fill-rule="evenodd"
+                                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="text-small mb-1"><a class="text-decoration-none text-muted" href="#!"><small>Snack &amp;
+                                Munchies</small></a></div>
+                    <h2 class="fs-6"><a class="text-inherit text-decoration-none"
+                            href="/shop/slurrp-millet-chocolate">Slurp Millet Chocolate</a></h2>
+                    <div class="d-inline-flex gap-1 align-items-center "><small class="text-warning">
+                            <div class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-fill text-warning">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"
+                                    fill="currentColor" class="bi bi-star-half text-warning">
+                                    <path
+                                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z">
+                                    </path>
+                                </svg></div>
+                        </small><span class="text-muted small">4.3 (4)</span></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="text-dark">$0 </span><span
+                                class="text-decoration-line-through text-muted">$0</span></div>
+                        <div><a role="button" tabindex="0" href="#!" class="btn btn-primary btn-sm btn btn-primary"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg> Add</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="./index.html" class="nav-link px-2 text-body-secondary">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="./about.html" class="nav-link px-2 text-body-secondary">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="./contact.html" class="nav-link px-2 text-body-secondary">Contact</a>
+            </li>
+            <li class="nav-item">
+                <p class="text-center text-body-secondary my-2">© 2025 Company, FryNest</p>
+                <p class="float-end ">
+                    <a href="#">Back to top</a>
+                </p>
+    </footer>
+
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2">
+                            <a href="./about.html" class="nav-link p-0 text-body-secondary">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="./index.html" class="nav-link p-0 text-body-secondary">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>© 2025 Company, FryNest. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3">
+                        <a class="link-body-emphasis" href="#" aria-label="Instagram">
+                            <svg class="bi" width="24" height="24">
+                                <use xlink:href="#instagram"></use>
+                            </svg></a>
+                    </li>
+                    <li class="ms-3">
+                        <a class="link-body-emphasis" href="#" aria-label="Facebook">
+                            <svg class="bi" width="24" height="24" aria-hidden="true">
+                                <use xlink:href="#facebook"></use>
+                            </svg></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+    <script style="height: 20%;" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
